@@ -1,0 +1,40 @@
+.example-container {
+  // height: 400px;
+  // width: 550px;
+  max-width: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+table {
+  // width: 800px;
+  margin: auto;
+  width: 100%;
+  min-width: 800px;
+}
+.mat-column-project {
+  min-width: 200px !important;
+  max-width: 240px;
+  word-wrap: break-word;
+}
+.mat-column-date,
+.mat-column-location {
+  min-width: 120px !important;
+}
+
+.mat-column-pv,
+.mat-column-wind,
+.mat-column-solar,
+.mat-column-thermal,
+.mat-column-grid,
+.mat-column-note {
+  text-align: center;
+}
+
+.mat-column-npv,
+.mat-column-irr,
+.mat-column-lcoe,
+.mat-column-capex,
+.mat-column-revenue {
+  text-align: right;
+}

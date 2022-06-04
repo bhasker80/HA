@@ -1,0 +1,27 @@
+// test project form:
+
+.testForm {
+  padding: 16px 0 0;
+  .mat-form-field {
+    width: 24%;
+    margin-right: 1.33%;
+    margin-top: 8px;
+    margin-bottom: 4px;
+  }
+  .mat-form-field:nth-child(4n + 4) {
+    margin-right: 0;
+  }
+}
+
+.project-detail {
+  padding: 16px 32px 0;
+  border-bottom: 1px solid $divider;
+  background-color: rgba($primary, 0.1);
+  .project-type {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid $divider;
+    border-bottom: 1px solid $divider;
+    padding: 16px 0;
+  }
+}

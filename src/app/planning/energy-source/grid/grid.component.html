@@ -1,0 +1,48 @@
+<!-- <hero-img></hero-img> -->
+<h1 class="mat-headline" style="margin: 16px 0;">Grid Configuration</h1>
+<mat-divider></mat-divider>
+<div class="sourceForm">
+    <div class="formRow">
+        <section>
+            <mat-form-field appearance="outline" required color="accent">
+                <mat-label>Plant Contracted Active Power Capacity</mat-label>
+                <input matInput value="0">
+                <span matSuffix>MW</span>
+            </mat-form-field>
+        </section>
+        <section>
+            <mat-form-field hintLabel="Allowed Input 0.1~1.0" appearance="outline" color="accent">
+                <mat-label>Plant Power Factor</mat-label>
+                <input matInput value=".95">
+            </mat-form-field>
+        </section>
+        <section>
+            <mat-form-field appearance="outline" color="accent">
+                <mat-label>AC Capacity Ratio For CUF</mat-label>
+                <input matInput value="1">
+            </mat-form-field>
+        </section>
+        <section>
+            <mat-form-field appearance="outline" color="accent">
+                <mat-label>Plant Availability Threshold</mat-label>
+                <input matInput>
+                <span matSuffix>%</span>
+            </mat-form-field>
+        </section>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="formRow">
+        <section>
+            <mat-form-field appearance="outline" color="accent">
+                <mat-label>Constraint on Plant Output to Grid</mat-label>
+                <mat-select value="1">
+                    <mat-option value="1">No Curtailment</mat-option>
+                    <mat-option value="2">With Schedule Curtailment</mat-option>
+                    <mat-option value="3" disabled>Load Follwing With BESS (no Gas/Turbine Engine)</mat-option>
+                    <mat-option value="4" disabled>Load Matching With Gas/Turbine Engine</mat-option>
+                    <mat-option value="5" disabled>Load Reduction With Gas/Turbine Engine</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </section>
+    </div>
+</div>

@@ -1,0 +1,110 @@
+.mat-form-field-appearance-outline .mat-form-field-prefix,
+.mat-form-field-appearance-outline .mat-form-field-suffix {
+  top: 0 !important;
+}
+
+// Handle buttons appropriately, with respect to line-height
+.mat-raised-button,
+.mat-stroked-button,
+.mat-flat-button {
+  padding: 0 1.15em;
+  margin: 0 0.65em;
+  min-width: 3em;
+  line-height: 36.4px;
+  border-radius: $radius !important;
+  text-transform: uppercase;
+}
+
+.mat-divider {
+  border-top-color: $divider;
+}
+
+.mat-button-toggle-group-appearance-standard {
+  border-radius: $radius !important;
+  border: 1px solid $formBorder;
+  .mat-button-toggle-appearance-standard {
+    .mat-button-toggle-label-content {
+      line-height: 42px;
+      padding: 0 24px;
+      // text-transform: uppercase;
+    }
+  }
+  .mat-button-toggle {
+    background-color: transparent;
+    color: $label;
+    + .mat-button-toggle {
+      border-left: solid 1px rgba($formBorder, 0.5);
+    }
+  }
+  .mat-button-toggle-checked {
+    background-color: $label;
+    // box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    &.mat-button-toggle-appearance-standard {
+      color: $base;
+    }
+  }
+}
+
+.mat-list-item-content {
+  padding: 0 !important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  // color: $formBorder;
+  .mat-form-field-outline-start,
+  .mat-form-field-outline-end {
+    border-radius: $radius;
+  }
+}
+
+.mat-toolbar-row,
+.mat-toolbar-single-row {
+  padding: 0 32px !important;
+}
+
+// mat-table customization
+.mat-table {
+  background-color: $base;
+  th.mat-header-cell,
+  td.mat-cell,
+  td.mat-footer-cell {
+    border-bottom-color: $divider;
+    color: $label;
+    border-right: 1px solid $divider;
+    padding: 12px !important;
+    min-width: 80px;
+    box-sizing: border-box;
+  }
+  thead {
+    background-color: $primary;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+    th.mat-header-cell {
+      font-weight: 400;
+      border-right-color: rgba($label, 0.05);
+    }
+  }
+}
+
+.mat-table-sticky-border-elem-right {
+  border-left: 1px solid rgba($label, 0.2);
+  box-shadow: 0 2px 4px 0px rgb(0 0 0);
+  min-width: auto !important;
+  border-right: none !important;
+}
+
+th.mat-header-cell.mat-table-sticky-border-elem-right {
+  border-left: 1px solid rgba($label, 0.05);
+  box-shadow: none;
+}
+
+// menu customization
+.mat-menu-panel {
+  background: $contextMenu;
+  .mat-menu-item {
+    display: flex;
+    align-items: center;
+  }
+  .mat-divider {
+    border-top-color: rgba($label, 0.08);
+  }
+}

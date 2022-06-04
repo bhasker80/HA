@@ -1,0 +1,14 @@
+<div class="sub-header">
+    <nav mat-tab-nav-bar color="accent">
+        <nav mat-tab-nav-bar>
+            <a mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.link" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">
+                <mat-icon>{{link.icon}}</mat-icon>
+                <span class="mat-body-2">{{link.label}}</span>
+            </a>
+        </nav>
+
+    </nav>
+    <span class="spacer"></span>
+    <mat-divider [vertical]="true" style="margin-right:24px; height: 50px;"></mat-divider>
+    <button mat-raised-button color="accent">Run</button>
+</div>

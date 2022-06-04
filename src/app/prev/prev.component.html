@@ -1,0 +1,190 @@
+<div style="padding: 32px;">
+    <div style="display: flex; align-items: center; margin-bottom: 32px;">
+
+        <h1 class="mat-headline" style="margin: auto;">Saved Analysis by — &nbsp; </h1>
+        <mat-form-field appearance="outline" color="accent" style="margin-bottom: -1.25em">
+            <!-- <mat-label>Country</mat-label> -->
+            <mat-select value="1">
+                <mat-option value="1">Bhasker Agrawal</mat-option>
+                <mat-option value="2">Adam Ivan</mat-option>
+                <mat-option value="3">Franklin Gothenburg</mat-option>
+                <mat-option value="4">Hoshin Joe</mat-option>
+                <mat-option value="5">Seema Kalptaru</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <span class="spacer"></span>
+        <button mat-icon-button class="fade">
+            <mat-icon>search</mat-icon>
+        </button>
+        <button mat-icon-button style="margin-left: 24px;" class="fade">
+            <!-- <mat-icon matBadge="1" matBadgeColor="warn">filter_list</mat-icon> -->
+            <mat-icon>filter_list</mat-icon>
+        </button>
+    </div>
+
+    <section class="example-container" tabindex="0" style="margin: auto;">
+        <table mat-table [dataSource]="dataSource" matSort>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="project">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Project Name </th>
+                <td mat-cell *matCellDef="let element"> {{element.project}} </td>
+            </ng-container>
+
+            <!-- Position Column -->
+            <ng-container matColumnDef="version">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Version </th>
+                <td mat-cell *matCellDef="let element"> v{{element.version}} </td>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="date">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Date </th>
+                <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="region">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Region </th>
+                <td mat-cell *matCellDef="let element"> {{element.region}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="location">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Location </th>
+                <td mat-cell *matCellDef="let element"> {{element.location}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="npv">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> NPV (m) </th>
+                <td mat-cell *matCellDef="let element"> ${{element.npv}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="irr">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> IRR (%) </th>
+                <td mat-cell *matCellDef="let element"> {{element.irr}}% </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="lcoe">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> LCOE </th>
+                <td mat-cell *matCellDef="let element"> ${{element.lcoe}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="capex">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Capex </th>
+                <td mat-cell *matCellDef="let element"> ${{element.capex}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="revenue">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> 1st Year Revenue </th>
+                <td mat-cell *matCellDef="let element"> ${{element.revenue}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="note">
+                <th mat-header-cell *matHeaderCellDef> Note </th>
+                <td mat-cell *matCellDef="let element">
+                    <span class="material-icons fade" *ngIf=element.note>
+                        <!-- sticky_note_2 -->
+                        text_snippet
+                        <!-- article -->
+                    </span>
+                </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="pv">
+                <th mat-header-cell *matHeaderCellDef> PV </th>
+                <td mat-cell *matCellDef="let element">
+                    <span class="material-icons fade-more" *ngIf=element.pv>check</span>
+                </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="wind">
+                <th mat-header-cell *matHeaderCellDef> Wind </th>
+                <td mat-cell *matCellDef="let element">
+                    <span class="material-icons fade-more" *ngIf=element.wind>check</span>
+                </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="thermal">
+                <th mat-header-cell *matHeaderCellDef> Thermal </th>
+                <td mat-cell *matCellDef="let element">
+                    <span class="material-icons fade-more" *ngIf=element.thermal>check</span>
+                </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="solar">
+                <th mat-header-cell *matHeaderCellDef> Solar </th>
+                <td mat-cell *matCellDef="let element">
+                    <span class="material-icons fade-more" *ngIf=element.solar>check</span>
+                </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="grid">
+                <th mat-header-cell *matHeaderCellDef> Grid </th>
+                <td mat-cell *matCellDef="let element">
+                    <span class="material-icons fade-more" *ngIf=element.grid>check</span>
+                </td>
+            </ng-container>
+
+            <!-- Star Column -->
+            <ng-container matColumnDef="star" stickyEnd>
+                <th mat-header-cell *matHeaderCellDef aria-label="row actions">&nbsp;</th>
+                <td mat-cell *matCellDef="let element">
+                    <button mat-icon-button [matMenuTriggerFor]="analysisNav">
+                        <mat-icon>more_vert</mat-icon>
+                    </button>
+                    <mat-menu #analysisNav="matMenu" xPosition="before" class="context-nav">
+                        <button mat-menu-item>
+                            <mat-icon>visibility</mat-icon>
+                            <span>View</span>
+                        </button>
+                        <mat-divider></mat-divider>
+                        <button mat-menu-item>
+                            <mat-icon>download</mat-icon>
+                            <span>Download</span>
+                        </button>
+                        <mat-divider></mat-divider>
+                        <button mat-menu-item>
+                            <mat-icon>verified</mat-icon>
+                            <span>Finalize</span>
+                            <span class="spacer"></span>
+                            <mat-slide-toggle (click)="clickPrevent($event)"></mat-slide-toggle>
+                        </button>
+                        <mat-divider></mat-divider>
+                        <button mat-menu-item>
+                            <mat-icon>group_add</mat-icon>
+                            <span>Share</span>
+                            <span class="spacer"></span>
+                            <mat-slide-toggle (click)="clickPrevent($event)"></mat-slide-toggle>
+                        </button>
+                        <mat-divider></mat-divider>
+                        <button mat-menu-item>
+                            <mat-icon>delete</mat-icon>
+                            <span>Delete</span>
+                        </button>
+                    </mat-menu>
+                </td>
+            </ng-container>
+
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+        </table>
+    </section>
+    <br />
+    <span class="mat-caption fade" style="opacity: .67;">* NPV, LCOE calculation is in Million <br />* IRR %</span>
+
+</div>

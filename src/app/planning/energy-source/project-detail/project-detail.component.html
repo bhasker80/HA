@@ -1,0 +1,53 @@
+<div class="project-detail">
+    <!-- <div style="width: 1440px; margin: auto;"> -->
+    <h1 class="mat-headline">Project Detail</h1>
+    <div class="project-type">
+        <div>
+            <div class="mat-body-2">
+                Analysis Type
+            </div>
+            <span class="mat-caption fade">Select new analysis to start from scratch or saved analysis to load your existing run from database.</span>
+        </div>
+        <span class="spacer"></span>
+        <mat-button-toggle-group name="" aria-label="" value="bold">
+            <mat-button-toggle value="bold" selected="true" color="primary">New</mat-button-toggle>
+            <mat-button-toggle value="italic">Saved</mat-button-toggle>
+        </mat-button-toggle-group>
+    </div>
+
+    <div class="testForm">
+        <mat-form-field hintLabel="Project name required!" appearance="outline" required color="accent">
+            <mat-label>Project Name *</mat-label>
+            <input matInput placeholder="Enter Project Name">
+        </mat-form-field>
+        <mat-form-field appearance="outline" color="accent">
+            <mat-label>Country</mat-label>
+            <mat-select>
+                <mat-option value="option">India</mat-option>
+                <mat-option value="option">USA</mat-option>
+                <mat-option value="option">UK</mat-option>
+                <mat-option value="option">Canada</mat-option>
+                <mat-option value="option">Australia</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline" hintLabel="MM/DD/YYYY" color="accent">
+            <mat-label>Delivery Date</mat-label>
+            <input matInput [matDatepicker]="picker" (focus)="picker.open()" readonly>
+            <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field hintLabel="Max duration 25 Years!" appearance="outline" color="accent">
+            <mat-label>Project Duration</mat-label>
+            <input matInput maxlength="10" placeholder="Project life" type="number">
+        </mat-form-field>
+        <mat-form-field appearance="outline" color="accent">
+            <mat-label>Salesforce ID</mat-label>
+            <input matInput maxlength="10" placeholder="Enter Salesforce id">
+        </mat-form-field>
+        <mat-form-field appearance="outline" color="accent">
+            <mat-label>Customer Name</mat-label>
+            <input matInput placeholder="Enter customer name">
+        </mat-form-field>
+    </div>
+    <!-- </div> -->
+</div>

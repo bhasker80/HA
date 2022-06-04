@@ -1,0 +1,28 @@
+<!-- <hero-img></hero-img> -->
+<h1 class="mat-headline" style="margin: 16px 0;">Wind Configuration</h1>
+<mat-divider></mat-divider>
+<div class="sourceForm">
+    <div class="formRow">
+        <section>
+            <mat-form-field appearance="outline" fullWidth color="accent">
+                <mat-label>Location</mat-label>
+                <mat-select value="option">
+                    <mat-option value="option">User defined with hourly power profile</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="outline" required color="accent">
+                <mat-label>PV Invertor Active Power Nameplate *</mat-label>
+                <input matInput>
+                <span matSuffix>Upload</span>
+            </mat-form-field>
+        </section>
+        <section>
+            <mat-form-field hintLabel="Wind turbine nameplate value must be > 0 MW!" appearance="outline" required color="accent">
+                <mat-label>Wind Turbine Nameplate *</mat-label>
+                <input matInput>
+                <span matSuffix>MW</span>
+            </mat-form-field>
+        </section>
+    </div>
+
+</div>

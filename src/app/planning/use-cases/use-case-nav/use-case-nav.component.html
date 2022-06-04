@@ -1,0 +1,16 @@
+<div>
+    <div class="list-nav" mat-button [routerLink]="source.link" *ngFor="let source of useCases" [ngClass]="{'selected': activeLink == source}" (click)="activeLink = source">
+        <div class="div-fx">
+            <mat-slide-toggle [checked]="source.active" (click)="clickPrevent($event)"></mat-slide-toggle>
+            <mat-icon *ngIf="source.icon">{{source.icon}}</mat-icon>
+            <div>
+                <h2>{{source.label}}</h2>
+                <div class="mat-caption info" *ngIf="source.info">
+                    <span class="material-icons">help</span>
+                    {{source.info}}
+                </div>
+                <div class="fade">{{source.desc}}</div>
+            </div>
+        </div>
+    </div>
+</div>

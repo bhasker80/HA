@@ -1,0 +1,99 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: $base;
+  color: $txt;
+  // max-width: 1280px;
+  // margin: auto;
+}
+// app wide styling
+.spacer {
+  flex: 1 1 auto;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.fade {
+  color: $label;
+}
+
+.fade-more {
+  color: $formBorder;
+}
+
+.footer {
+  background: red;
+}
+
+// page structure
+.box {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  .content {
+    flex: 1;
+  }
+}
+
+// app header
+.header {
+  height: 72px;
+  .profile-pic {
+    width: 42px;
+    height: 42px;
+    border-radius: 100%;
+  }
+  .active {
+    color: $accent;
+  }
+}
+
+.side-nav-border {
+  width: 1px;
+  background-color: $divider;
+}
+
+// app form comming styling
+.sourceForm {
+  padding: 16px 0 0;
+  .formRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    > section {
+      width: 48%;
+      margin-top: 8px;
+      margin-bottom: 16px;
+      .mat-form-field {
+        width: 100%;
+      }
+      .mat-radio-button ~ .mat-radio-button {
+        margin-left: 32px;
+      }
+      > section:nth-child(2n + 2) {
+        margin-right: 0;
+      }
+    }
+  }
+  .mat-divider {
+    margin-bottom: 12px;
+  }
+}
+
+// context nav with icon::after
+.context-nav {
+  width: 240px;
+  .mat-menu-item {
+    padding: 8px;
+  }
+  .mat-menu-content:not(:empty) {
+    padding: 10px;
+  }
+}

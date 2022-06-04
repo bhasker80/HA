@@ -1,0 +1,70 @@
+<!-- <hero-img></hero-img> -->
+<h1 class="mat-headline" style="margin: 0 0 16px;">Energy Sale Configuration</h1>
+<mat-divider></mat-divider>
+<div class="sourceForm">
+    <div class="formRow">
+        <section>
+            <mat-form-field appearance="outline" fullWidth color="accent">
+                <mat-label>Location</mat-label>
+                <mat-select>
+                    <mat-option value="option">usa az casa Poly</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </section>
+        <section>
+            <mat-form-field appearance="outline" color="accent">
+                <mat-label>Solar Invertor Type</mat-label>
+                <mat-select>
+                    <mat-option value="option">LV5+_1566_SOLAR (3.3 MVA @ 50 C)</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </section>
+    </div>
+
+    <mat-divider></mat-divider>
+    <div class="formRow">
+        <section>
+            <div style="margin-bottom:18px;">
+                <h5 class="mat-body-1" style="margin-bottom: 8px;">Module Type</h5>
+                <mat-radio-group aria-label="Select an option" color="accent">
+                    <mat-radio-button value="1">Poly-Si</mat-radio-button>
+                    <mat-radio-button value="2">Mono-Si</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </section>
+        <section>
+            <div style="margin-bottom:18px;">
+                <h5 class="mat-body-1" style="margin-bottom: 8px;">Mounting Option Type</h5>
+                <mat-radio-group aria-label="Select an option" color="accent">
+                    <mat-radio-button value="1">1 - Axis</mat-radio-button>
+                    <mat-radio-button value="2">Fix Tilt</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </section>
+
+    </div>
+
+    <mat-divider></mat-divider>
+    <div class="formRow">
+        <section>
+            <mat-form-field hintLabel="Active power value must be > 0 MW!" appearance="outline" required color="accent">
+                <mat-label>PV Invertor Active Power Nameplate *</mat-label>
+                <input matInput>
+                <span matSuffix>MW</span>
+            </mat-form-field>
+        </section>
+        <section>
+            <mat-form-field appearance="outline" color="accent">
+                <mat-label>PV DC Nameplate to Inverter Nameplate Ratio</mat-label>
+                <input matInput>
+            </mat-form-field>
+        </section>
+        <section>
+            <mat-form-field appearance="outline" color="accent">
+                <mat-label>Max Ambient Temrature</mat-label>
+                <input matInput>
+                <span matSuffix>°C</span>
+            </mat-form-field>
+        </section>
+    </div>
+</div>

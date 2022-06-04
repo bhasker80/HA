@@ -1,0 +1,29 @@
+// tab nav bar for sub header
+.sub-header {
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  border-bottom: 1px solid $divider;
+  background-color: $subHeader;
+  .mat-tab-nav-bar,
+  .mat-tab-header {
+    border-bottom: none;
+    .mat-tab-link {
+      height: 100px;
+      min-width: auto;
+      display: flex;
+      flex-direction: column;
+      opacity: 0.87;
+      padding: 0 4px;
+      margin-right: 32px;
+      text-transform: uppercase;
+      color: $label;
+      .mat-icon {
+        margin-bottom: 14px;
+      }
+      &.mat-tab-label-active {
+        color: $accent;
+      }
+    }
+  }
+}

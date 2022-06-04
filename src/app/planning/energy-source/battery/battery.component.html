@@ -1,0 +1,125 @@
+<!-- <hero-img></hero-img> -->
+<h1 class="mat-headline" style="margin: 16px 0;">Battery Configuration</h1>
+<mat-divider></mat-divider>
+<div class="sourceForm">
+    <div class="formRow">
+        <section>
+            <mat-form-field appearance="outline" color="accent">
+                <mat-label>Battery Type</mat-label>
+                <mat-select value="1">
+                    <mat-option value="1">Lishen w/ 1x DD3X (4.9hr) (ATQed)</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </section>
+        <section>
+            <mat-form-field appearance="outline" color="accent">
+                <mat-label>Life Model</mat-label>
+                <mat-select value="1">
+                    <mat-option value="1">Lishen LFP Li-ion life model</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </section>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="formRow">
+        <section>
+            <div>
+                <div style="margin-bottom: 18px;">
+                    <h5 class="mat-body-1" style="margin-bottom: 8px;">ES Coupling</h5>
+                    <mat-radio-group aria-label="Select an option" color="accent" value="2">
+                        <mat-radio-button value="1">LVDC</mat-radio-button>
+                        <mat-radio-button value="2">MVAC</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <!-- <mat-form-field appearance="fill" color="accent">
+                    <mat-label>Weather File</mat-label>
+                    <mat-select value="1">
+                        <mat-option value="1">usa ak palmer municipal</mat-option>
+                    </mat-select>
+                </mat-form-field> -->
+            </div>
+        </section>
+        <section>
+            <div style="margin-bottom:18px;">
+                <h5 class="mat-body-1" style="margin-bottom: 8px;">Max Cycle / Day</h5>
+                <mat-radio-group aria-label="Select an option" color="accent">
+                    <mat-radio-button value="3">1</mat-radio-button>
+                    <mat-radio-button value="4">2</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </section>
+    </div>
+    <mat-divider></mat-divider>
+
+
+    <div style="display: flex; align-items: center; padding:8px 0 20px;">
+
+        <div class="fade">Capacity Add Strategy</div>
+
+        <span class="spacer"></span>
+        <mat-button-toggle-group name="" aria-label="" value="augment">
+            <mat-button-toggle value="none" color="primary">None</mat-button-toggle>
+            <mat-button-toggle value="augment">Augment Only</mat-button-toggle>
+            <mat-button-toggle value="repalce">Augment + Replace</mat-button-toggle>
+        </mat-button-toggle-group>
+    </div>
+    <mat-divider></mat-divider>
+
+    <div class="formRow">
+        <section>
+            <mat-form-field appearance="outline" required color="accent">
+                <mat-label>Active Power Rating</mat-label>
+                <input matInput value="0">
+                <span matSuffix>MW</span>
+            </mat-form-field>
+        </section>
+        <section>
+            <mat-form-field appearance="outline" color="accent" required>
+                <mat-label>Performance guarantee</mat-label>
+                <input matInput value="0">
+                <span matSuffix>MWH</span>
+            </mat-form-field>
+        </section>
+        <section>
+            <mat-form-field appearance="outline" color="accent">
+                <mat-label>Initial Oversize Factor</mat-label>
+                <input matInput value="0">
+                <span matSuffix>%</span>
+            </mat-form-field>
+        </section>
+        <section>
+            <mat-form-field appearance="outline" required color="accent">
+                <mat-label>Augment Oversize Factor</mat-label>
+                <input matInput value="5">
+                <span matSuffix>%</span>
+            </mat-form-field>
+        </section>
+        <section>
+            <mat-form-field appearance="outline" color="accent" required>
+                <mat-label>Max Ambient Temperature</mat-label>
+                <input matInput value="45">
+                <span matSuffix>°C</span>
+            </mat-form-field>
+        </section>
+        <section>
+            <mat-form-field appearance="outline" color="accent">
+                <mat-label>Voltage Tolerance</mat-label>
+                <input matInput value="10">
+                <span matSuffix>%</span>
+            </mat-form-field>
+        </section>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="sourceForm">
+        <div class="formRow">
+            <section>
+                <mat-form-field appearance="outline" color="accent">
+                    <mat-label>Weather File</mat-label>
+                    <mat-select value="1">
+                        <mat-option value="1">usa ak palmer municipal</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </section>
+        </div>
+    </div>

@@ -1,0 +1,29 @@
+<mat-toolbar color="primary" class="header">
+    <!-- <div style="width: 1440px; display: flex; align-items: center; margin: auto;"> -->
+    <img src="assets/images/logo-ge.svg" width="42px" height="42px" style="margin-right: 18px;">
+    <span style="font-size: 20px; font-weight: bold; letter-spacing: .75px;">Hybrid Architect</span>
+    <span class="spacer"></span>
+    <a mat-button routerLink="/planning" routerLinkActive="active">Project Planning</a>
+    <a mat-button routerLink="/prev-analysis" routerLinkActive="active">Previous Analysis</a>
+    <a mat-button [matMenuTriggerFor]="resourcesNav" style="padding-right:8px;">
+        Resources
+        <mat-icon style="font-size: 18px; line-height: 24px;">expand_more</mat-icon>
+    </a>
+    <mat-menu #resourcesNav="matMenu">
+        <button mat-menu-item>Product Overview v. 8.5.7.3</button>
+        <button mat-menu-item disabled="">User Tutorial</button>
+        <button mat-menu-item>Other Resources</button>
+    </mat-menu>
+
+    <a mat-button routerLink="/admin" routerLinkActive="active">Admin</a>
+    <mat-divider [vertical]="true" style="margin:0 12px; height: 42px;"></mat-divider>
+    <a mat-button style="padding-left:8px;" [matMenuTriggerFor]="userNav">
+        <mat-icon style="margin-right: 5px; font-size: 22px;">account_circle</mat-icon> 212714124
+        <!-- <mat-icon style="font-size: 18px; line-height: 24px;">expand_more</mat-icon> -->
+    </a>
+    <mat-menu #userNav="matMenu" xPosition="before">
+        <button mat-menu-item>Logout</button>
+    </mat-menu>
+    <!-- <button mat-icon-button style="margin-left: 12px;" [matMenuTriggerFor]="userNav"> <img src="assets/images/users/bhasker.jpg" alt="user" class="profile-pic"> </button>-->
+    <!-- </div> -->
+</mat-toolbar>
