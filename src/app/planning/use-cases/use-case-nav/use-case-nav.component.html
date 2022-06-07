@@ -1,7 +1,9 @@
 <div>
-    <div class="list-nav" mat-button [routerLink]="source.link" *ngFor="let source of useCases" [ngClass]="{'selected': activeLink == source}" (click)="activeLink = source">
+    <div class="list-nav" mat-button [routerLink]="source.active ? source.link : null" *ngFor="let source of useCases" (click)="source.active  && activeLink = source"
+        [ngClass]="!source.active ? 'disabled' : activeLink == source ? 'selected': ''">
         <div class="div-fx">
-            <mat-slide-toggle [checked]="source.active" (click)="clickPrevent($event)"></mat-slide-toggle>
+            <!-- <mat-slide-toggle [checked]="source.active" (click)="clickPrevent($event)"></mat-slide-toggle> -->
+            <mat-slide-toggle [disabled]="source.disabled" [checked]="source.active" (click)="clickPrevent($event)" [(ngModel)]="source.active"></mat-slide-toggle>
             <mat-icon *ngIf="source.icon">{{source.icon}}</mat-icon>
             <div>
                 <h2>{{source.label}}</h2>

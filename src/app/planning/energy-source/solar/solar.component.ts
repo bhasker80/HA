@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: [],
 })
 export class SolarComponent implements OnInit {
+  hero = 'solar.jpg';
   constructor() {}
 
   ngOnInit(): void {}

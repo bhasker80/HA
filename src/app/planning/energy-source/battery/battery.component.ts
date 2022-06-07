@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: [],
 })
 export class BatteryComponent implements OnInit {
+  hero = 'battery.jpg';
   constructor() {}
 
   ngOnInit(): void {}

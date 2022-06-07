@@ -97,3 +97,18 @@ body {
     padding: 10px;
   }
 }
+
+// hero container
+.fill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+.fill img {
+  object-fit: cover;
+  width: 100%;
+  min-height: 120px;
+  max-height: 150px;
+}

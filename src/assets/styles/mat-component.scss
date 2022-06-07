@@ -24,13 +24,14 @@
   border: 1px solid $formBorder;
   .mat-button-toggle-appearance-standard {
     .mat-button-toggle-label-content {
-      line-height: 42px;
-      padding: 0 24px;
+      line-height: 36px;
+      padding: 0 16px;
       // text-transform: uppercase;
     }
   }
   .mat-button-toggle {
     background-color: transparent;
+    font-weight: 400;
     color: $label;
     + .mat-button-toggle {
       border-left: solid 1px rgba($formBorder, 0.5);
@@ -106,5 +107,35 @@ th.mat-header-cell.mat-table-sticky-border-elem-right {
   }
   .mat-divider {
     border-top-color: rgba($label, 0.08);
+  }
+}
+.mat-select-panel,
+.mat-calendar {
+  background: $contextMenu;
+}
+
+// mat-toggle
+.mat-slide-toggle {
+  .mat-slide-toggle-bar {
+    height: 10px;
+    .mat-slide-toggle-thumb-container {
+      top: -5px;
+    }
+  }
+}
+
+// mat-form-fields customization
+.mat-form-field-flex {
+  .mat-form-field-infix {
+    padding: 0.7em 0px !important;
+  }
+}
+.mat-form-field-label-wrapper {
+  top: -1.2em;
+}
+.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float {
+  .mat-form-field-label {
+    transform: translateY(-1.25em) scale(0.75);
+    width: 133.33333%;
   }
 }

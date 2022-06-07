@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: [],
 })
 export class ThermalComponent implements OnInit {
+  hero = 'thermal.jpg';
   constructor() {}
 
   ngOnInit(): void {}

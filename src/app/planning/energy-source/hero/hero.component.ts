@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'hero-img',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: [],
 })
 export class HeroComponent implements OnInit {
+  @Input() imgSrc: string = '';
   constructor() {}
   ngOnInit(): void {}
 }

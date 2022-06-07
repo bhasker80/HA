@@ -17,9 +17,9 @@
 
     <a mat-button routerLink="/admin" routerLinkActive="active">Admin</a>
     <mat-divider [vertical]="true" style="margin:0 12px; height: 42px;"></mat-divider>
-    <a mat-button style="padding-left:8px;" [matMenuTriggerFor]="userNav">
+    <a mat-button style="padding-left:8px; padding-right: 8px;" [matMenuTriggerFor]="userNav">
         <mat-icon style="margin-right: 5px; font-size: 22px;">account_circle</mat-icon> 212714124
-        <!-- <mat-icon style="font-size: 18px; line-height: 24px;">expand_more</mat-icon> -->
+        <mat-icon style="font-size: 18px; line-height: 24px;">expand_more</mat-icon>
     </a>
     <mat-menu #userNav="matMenu" xPosition="before">
         <button mat-menu-item>Logout</button>

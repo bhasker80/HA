@@ -21,6 +21,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatSortModule } from '@angular/material/sort';
+import { FormsModule } from '@angular/forms';
 
 import { MatTableModule } from '@angular/material/table';
 import { CdkTableModule } from '@angular/cdk/table';
@@ -48,6 +49,7 @@ import { CdkTableModule } from '@angular/cdk/table';
     MatExpansionModule,
     MatBadgeModule,
     MatSortModule,
+    FormsModule,
     // CdkTableModule,
     MatTableModule,
   ],

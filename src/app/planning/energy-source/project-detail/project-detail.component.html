@@ -10,8 +10,8 @@
         </div>
         <span class="spacer"></span>
         <mat-button-toggle-group name="" aria-label="" value="bold">
-            <mat-button-toggle value="bold" selected="true" color="primary">New</mat-button-toggle>
-            <mat-button-toggle value="italic">Saved</mat-button-toggle>
+            <mat-button-toggle value="bold" selected="true" color="primary">New Analysis</mat-button-toggle>
+            <mat-button-toggle value="italic">Prev. Analysis</mat-button-toggle>
         </mat-button-toggle-group>
     </div>
 
@@ -33,7 +33,7 @@
         <mat-form-field appearance="outline" hintLabel="MM/DD/YYYY" color="accent">
             <mat-label>Delivery Date</mat-label>
             <input matInput [matDatepicker]="picker" (focus)="picker.open()" readonly>
-            <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
+            <mat-icon matSuffix>today</mat-icon>
             <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
         <mat-form-field hintLabel="Max duration 25 Years!" appearance="outline" color="accent">

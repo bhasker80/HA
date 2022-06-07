@@ -12,7 +12,12 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { PrevComponent } from './prev/prev.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, PrevComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    PrevComponent,
+    PageNotFoundComponent,
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -21,6 +26,6 @@ import { PrevComponent } from './prev/prev.component';
     AppRoutingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent, PageNotFoundComponent],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
